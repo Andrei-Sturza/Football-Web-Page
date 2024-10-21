@@ -1,0 +1,36 @@
+/* CSS styles */
+body {
+    background-color: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%); /* Add a light gray background color */
+    background-image: linear-gradient(to bottom, #65a02e, #1f6e79); /* Gradient from light gray to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make the body height take up the full viewport height */
+    margin: 0; /* Remove default margin */
+    flex-direction: column; /* Align items vertically */
+}
+
+.chat-container {
+    max-width: 600px; /* Set a maximum width for the chat container */
+    width: 80%; /* Set the width to be 80% of its parent container */
+    height: 80vh; /* Set the height to be 80% of the viewport height */
+    padding: 20px; /* Add some padding */
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #25ddc5 0%, #6284FF 50%, #FF0000 100%);    
+    border-radius: 10px; /* Add a border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin-bottom: 20px; /* Add some margin at the bottom */
+
+    overflow-y: auto; /* Enable scrolling when the content overflows */
+}
+
+.message {
+    margin-bottom: 10px; /* Add some margin at the bottom of each message */
+    padding: 10px; /* Add padding to the message */
+    border-radius: 5px; /* Add border radius to the message */
+    background-color: rgba(224, 224, 224, 0.5); /* Set background color with transparency */
+}
+
+#chat-form {
+    display: flex; /* Make the form elements align horizontally */
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Americanooo Blog</title>
+    
+</head>
+
+<body style="background-color:powderblue;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Keep exploring</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link active" href="index.html">Home</a>
+                        <a class="nav-item nav-link" href="about.html">About</a>
+                        <a class="nav-item nav-link" href="form.html">Quiz</a>
+                        <a class="nav-item nav-link" href="gallery.html">Football Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <br>
+
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="searchButton" onclick="searchPosts()">Search</button>
+        </div>
+
+    <h1 class = "blog_title">In this blog we will talk about football</h1>
+    <p>Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified,
+        the word football normally means the form of football that is the most popular where the word is used.</p>
+
+    <h2>Football Confderations</h2>
+    <ol>
+        <li>AFC - Asian Football Confederation - 47 members - founded in 1954, represents Asian nations in football. The
+            main tournament is the AFC Asian Cup.</li>
+        <li>CAF - Confederation of African Football - 54 members + 2 associate - founded in 1957 - represents African
+            nations in football. The main tournament is the African Cup of Nations.</li>
+        <li>CONCACAF - Confederation of North, Central American and Caribbean Association Football - 41 members - founded
+            in 1961 represents North American, Central American and Caribbean nations. The main tournament is the
+            CONCACAF Gold Cup.</li>
+        <li>CONMEBOL - Confederación Sudamericana de Fútbol - 10 members - founded in 1916 represents South American
+            nations in football. The main tournament is the Copa América.</li>
+        <li>OFC - Oceania Football Confederation - 11 members + 2 associate - founded in 1966 represents Oceanian nations
+            in football. The main tournament is the OFC Nations Cup.</li>
+        <li>UEFA - Union of European Football Associations - 55 members - founded in 1954 represents European nations in
+            football. The main tournament is the UEFA European Championship, also known as UEFA Euro.
+        </li>
+    </ol>
+    <h2>Famous Football Players</h2>
+    <ul>
+        <li>Lionel Messi</li>
+        <li>Cristiano Ronaldo</li>
+        <li>Diego Armnado Maradona</li>
+        <li>Pele</li>
+        <li>Zinedine Zidane</li>
+    </ul>
+
+    <h2>Most important tournament</h2>
+    <p>The primary championship is the World Cup.</p>
+
+    <h2>Get Involved</h2>
+    <p>Watch football for relaxing and having fun, living the most intense emotions and let you be yourself.</p>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">👆</button>
+    <footer>
+        <p>&copy; 2024 Americanoo - Blog</p>
+    </footer>
+    
+    <script>
+        // Function to return the page to the beginning
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+
+</html>

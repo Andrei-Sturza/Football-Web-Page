@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'chatbot.css' %}">
+    <style>
+        /* Navbar styles */
+        nav {
+            background-color: #4CAF50;
+            overflow: hidden;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        nav ul li {
+            /*float: left;*/
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+        
+        nav ul li a:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'form' %}">Quiz</a></li>
+            <li><a href="{% url 'gallery' %}">Football Gallery</a></li>
+            <li><a class="nav-item nav-link" href="{% url 'chatbot' %}">Chat Bot</a></li>
+        </ul>
+    </nav>
+
+    <div class="chat-container" id="chat-container"></div>
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Answer Here...">
+        <button type="submit">Send</button>
+    </form>
+    <script src="{% static 'chatbot.js' %}"></script>
+</body>
+</html>
+

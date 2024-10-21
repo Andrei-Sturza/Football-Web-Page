@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <title>Quiz Time!</title>
+    <style>
+        /* Optimized styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: powderblue;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('arrow.png') no-repeat right center / 15px 15px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            flex: 0 0 30%;
+            margin-right: 10px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Navbar styling */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #007bff;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Quiz Time!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'form' %}">Quiz</a></li>
+                <li><a href="{% url 'gallery' %}">Football Gallery</a></li>
+                <li><a class="nav-item nav-link" href="{% url 'chatbot' %}">Chat Bot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="/submit" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="salutation">Salutation</label>
+                <select id="salutation" name="salutation">
+                    <option>--None--</option>
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                    <option>Mrs.</option>
+                    <option>Dr.</option>
+                    <option>Prof.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First name:</label>
+                <input id="firstName" name="firstName" type="text">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last name:</label>
+                <input id="lastName" name="lastName" type="text">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email">
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Date of Birth:</label>
+                <input id="birthDate" name="birthDate" type="date">
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" cols="30" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Interests:</label><br>
+                <input id="syseng" name="interests" value="syseng" type="checkbox">
+                <label for="syseng">System Engineer</label>
+                <input id="devopseng" name="interests" value="devopseng" type="checkbox">
+                <label for="devopseng">Devops Engineer</label>
+                <input id="inovtech" name="interests" value="inovtech" type="checkbox">
+                <label for="inovtech">Innovation Technologist</label>
+                <input id="dtbdevel" name="interests" value="dtbdevel" type="checkbox">
+                <label for="dtbdevel">Database Developer</label>
+            </div>
+            <div class="form-group">
+                <label for="profilePic">Profile picture:</label>
+                <input id="profilePic" name="profilePic" type="file" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="cv">Upload CV:</label>
+                <input id="cv" name="cv" type="file" accept="application/pdf,.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+            </div>
+            <div class="form-group">
+                <label>Communication preferences:</label><br>
+                <input id="emailComm" name="communication" value="email" type="checkbox">
+                <label for="emailComm">Email</label><br>
+                <input id="smsComm" name="communication" value="sms" type="checkbox">
+                <label for="smsComm">SMS</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form> 
+        <script src="form.js"></script>
+      </main>
+    <footer>
+        <p>&copy; 2024 Americanoo - Blog</p>
+    </footer>
+</body>
+
+</html>

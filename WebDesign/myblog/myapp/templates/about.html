@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+    <title>Americanoo - About</title>
+</head>
+<body>
+  <header>
+    <input type="checkbox" id="active"> 
+    <label for="active" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label> 
+    <div class="wrapper"> 
+      <ul> 
+        <li>
+          <a href="{% url 'home' %}">Home</a>
+        </li> 
+        <li>
+          <a href="{% url 'about' %}">About</a>
+        </li> 
+        <li>
+          <a href="{% url 'form' %}">Quiz Time!</a>
+        </li> 
+        <li>
+          <a class="nav-item nav-link" href="{% url 'gallery' %}">Football Gallery</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" href="{% url 'chatbot' %}">Chat Bot</a>
+        </li>
+      </ul> 
+    </div> 
+    <h1 class="blog_title">Here are a few moments from the greatest football matches of all time</h1>
+  </header>
+  <section class="image-container">
+    <div class="image-item">
+      <img src="{% static 'Photo1.jpg' %}" alt="France Final 2022">
+      <p>France Final 2022: An intense match filled with skillful plays and dramatic moments.</p>
+    </div>
+    <div class="image-item">
+      <img src="{% static 'Photo2.jpg' %}" alt="Argentina Final 2022" width="400" height="500">
+      <p>Argentina Final 2022: A thrilling showdown showcasing the passion and determination of both teams.</p>
+    </div>
+  </section>
+  <section class="football-info">
+    <h2>More about Football</h2>
+    <p>Football, also known as soccer in some countries, is the world's most popular sport, played and watched by millions of people globally. The sport has a rich history dating back centuries, with its modern rules codified in England in the 19th century.</p>
+    <p>Some notable events in football history include the FIFA World Cup, held every four years since 1930, where national teams compete for the prestigious title. Additionally, club football leagues such as the English Premier League, La Liga, Serie A, and Bundesliga attract massive audiences and showcase top talent from around the world.</p>
+    <p>Football is more than just a game; it embodies teamwork, skill, passion, and the spirit of competition. Iconic players like Pelé, Diego Maradona, Lionel Messi, and Cristiano Ronaldo have left an indelible mark on the sport with their incredible talent and achievements.</p>
+    <p>Whether it's the excitement of a last-minute goal, the thrill of a penalty shootout, or the tension of a closely contested match, football has the power to captivate and unite people from diverse backgrounds across the globe.</p>
+  </section>
+  <section class="football-info">
+    <h2>Interesting things</h2>
+    <p>Football, also known as soccer in some countries, is the world's most popular sport, played and watched by millions of people globally. The sport has a rich history dating back centuries, with its modern rules codified in England in the 19th century.</p>
+    <p>Some notable events in football history include the FIFA World Cup, held every four years since 1930, where national teams compete for the prestigious title. The tournament is not only a showcase of top-level football but also a celebration of cultural diversity and unity.</p>
+    <p>Club football also holds significant importance in the sport, with various leagues operating around the world. The English Premier League, La Liga, Serie A, Bundesliga, and many others feature top clubs and attract massive global audiences. These leagues serve as platforms for players to showcase their skills and compete at the highest level.</p>
+    <p>Football is more than just a game; it embodies teamwork, skill, passion, and the spirit of competition. Iconic players like Pelé, Diego Maradona, Lionel Messi, and Cristiano Ronaldo have left an indelible mark on the sport with their incredible talent and achievements. Their performances inspire generations of aspiring footballers worldwide.</p>
+    <p>The sport's popularity extends beyond the field, with fans passionately supporting their favorite teams and players. Football culture includes traditions like chants, team colors, and rituals that contribute to the unique atmosphere of stadiums around the world.</p>
+    <p>From grassroots levels to professional leagues, football plays a vital role in promoting social inclusion, fostering community spirit, and providing opportunities for personal growth. Initiatives such as youth development programs, women's football, and charitable projects demonstrate the sport's positive impact on society.</p>
+    <p>Whether it's the excitement of a last-minute goal, the thrill of a penalty shootout, or the tension of a closely contested match, football has the power to captivate and unite people from diverse backgrounds across the globe. It transcends language barriers and cultural differences, serving as a universal language that brings people together.</p>
+  </section>
+  <footer>
+    <p>&copy; 2024 Americanoo - Blog</p>
+  </footer>
+</body>
+</html>
